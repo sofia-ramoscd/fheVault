@@ -1,0 +1,6 @@
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafb 0%, #eef2ff 55%, #f9fafb 100%);
+  display: flex;
+  flex-direction: column;
+}
