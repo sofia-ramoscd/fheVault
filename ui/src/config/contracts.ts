@@ -1,5 +1,5 @@
 // FHEVault contract deployed on Sepolia
-export const CONTRACT_ADDRESS = '0x0000000000000000000000000000000000000000';
+export const CONTRACT_ADDRESS = '0xc3CcECf4F6712dcf5e811d91EEdF881FA5642672';
 
 // ABI copied from deployments/sepolia/FHEVault.json
 export const CONTRACT_ABI = [
