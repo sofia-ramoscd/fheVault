@@ -1,0 +1,250 @@
+.vault-app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 15px 35px -15px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #111827;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+
+.status-message {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  border-radius: 9999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+}
+
+.helper-text {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.overview-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.overview-value {
+  font-size: 1.2rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.overview-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1f2937;
+  background-color: #e5e7eb;
+}
+
+.overview-badge[data-active="true"][data-ready="true"] {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.overview-badge[data-active="true"][data-ready="false"] {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  background-color: #ffffff;
+}
+
+.form-row button {
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #3730a3;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-row button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.form-row button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px -12px rgba(55, 48, 163, 0.6);
+}
+
+.lock-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lock-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.lock-actions .secondary {
+  background-color: #1f2937;
+}
+
+.lock-actions .secondary:disabled {
+  background-color: #9ca3af;
+  color: #f3f4f6;
+  opacity: 1;
+}
+
+.decrypt-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.decrypt-block {
+  border: 1px dashed rgba(99, 102, 241, 0.35);
+  border-radius: 0.9rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(30, 64, 175, 0.05));
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.decrypt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.decrypt-label {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.decrypt-block button {
+  background-color: #4c1d95;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.7rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.decrypt-block button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.decrypt-value {
+  font-size: 1.3rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row button {
+    width: 100%;
+  }
+
+  .lock-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lock-actions .secondary {
+    width: 100%;
+  }
+}
